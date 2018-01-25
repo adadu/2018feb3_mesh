@@ -1,6 +1,5 @@
 //This synth doesn't have panning capability. Assign note events to an out (0, 1, 2, or 3) or an array of outs.
 
-(
 SynthDef(\pulse, {|
 	out=0,
 	freq=440,
@@ -23,4 +22,3 @@ SynthDef(\pulse, {|
 	var pulse = Pulse.ar(freqArry, width, amp/harmonics);
 	Out.ar(out, pulse * envGen);
 }).add;
-)
