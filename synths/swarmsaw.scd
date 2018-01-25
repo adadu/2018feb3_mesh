@@ -10,7 +10,7 @@ SynthDef(\swarmSaw2, {
     panlag1=0.5, panlag2=0.5, panlag3=0.5, panlag4=0.5,
     frqlag1=0.5, frqlag2=0.5, frqlag3=0.5, frqlag4=0.5,
     amplag1=0.5, amplag2=0.5, amplag3=0.5, amplag4=0.5,
-    frqOffset=50, frqSpread=100
+    frqOffset=50, frqSpread=100 |
 
     // frqOffset = MouseX.kr(50, 500, 1, 5.0);
     //frqSpread = MouseY.kr(0, 100);
