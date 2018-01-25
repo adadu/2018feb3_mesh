@@ -1,6 +1,13 @@
 SynthDef(\click, {
+	|out=0,
+	freq=120,
+	amp=0|
+
     var click;
-    click = Impulse.ar(0);
-    DetectSilence.ar(click,doneAction:2);
-    OffsetOut.ar(0, click * 0.5);
+    click = Impulse.ar(freq);
+    DetectSilence.ar(click,doneAction:0);
+    OffsetOut.ar(out, click * amp);
 }).add;
+
+
+	
