@@ -7,7 +7,7 @@ SynthDef(\click, {
     click = Impulse.ar(freq);
     DetectSilence.ar(click,doneAction:0);
     OffsetOut.ar(out, click * amp);
-}).add;
+}, metadata:()).add;
 
 
 	

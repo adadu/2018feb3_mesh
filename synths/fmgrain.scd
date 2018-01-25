@@ -19,6 +19,6 @@ SynthDef(\fmGrain, {|
 	var ndx = LFNoise1.kr(indexRate).range(indexRangeLow, indexRangeHi);
 	var fmgr = FMGrain.ar(Impulse.ar(freq), len, carfreq, modfreq, ndx, env);
 	Out.ar(0, Pan4.ar(fmgr, panX, panY, amp));
-}
+}, metadata:()
 ).add;
 

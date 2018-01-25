@@ -7,4 +7,4 @@ SynthDef('trigTest2', {
 	v3 = SinOsc.ar(freq3.lag(), 0, Decay2.kr(t_trig, 0.005, len));
 	v4 = SinOsc.ar(freq4.lag(), 0, Decay2.kr(t_trig, 0.005, len));
 	Out.ar(out, v1 * v2 * v3 * v4);
-}).add;
+}, metadata:()).add;

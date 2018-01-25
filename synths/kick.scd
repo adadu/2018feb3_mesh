@@ -11,5 +11,5 @@ SynthDef(\kick, {|
 	var subOsc = SinOsc.ar(subFreq);
 	var hitOsc = LPF.ar(WhiteNoise.ar(1), hitFreq);
 	Out.ar(0, Pan4.ar((subOsc+hitOsc) * envGen, panX, panY, amp));
-}).add;
+}, metadata:()).add;
 

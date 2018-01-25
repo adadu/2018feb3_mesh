@@ -23,7 +23,7 @@ SynthDef(\fm, {|
 	var env = Env([0.001, 0.001, 0.9, 0.001], [0, att, 1.0-att], [\sin, \sin]);
 	var envGen = EnvGen.kr(env, t_gate, doneAction: 0, timeScale: len);
 	Out.ar(0, Pan4.ar(car * envGen, panX, panY));
-}).add;
+}, metadata:()).add;
 
 
 

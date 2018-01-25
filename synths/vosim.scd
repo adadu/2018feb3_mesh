@@ -26,4 +26,4 @@ SynthDef(\vosim, {|
             decay),
            SinOsc.kr(SinOsc.kr(i+1*0.47, 4, 1)), 1/harms)
                   )*envGen});
-}).add;
+}, metadata:()).add;

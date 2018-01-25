@@ -17,4 +17,4 @@ SynthDef(\stringRes, {
 	Out.ar(out, Streson.ar(WhiteNoise.ar,
 	EnvGen.kr(Env([startfreq, startfreq, endfreq], [0, len], 'exp'), t_gate, doneAction: 0).reciprocal, res, amp) *
 	EnvGen.ar(Env([0, 0, att, dec, sus, 0], [attime, dectime, sustime, reltime].normalizeSum*len, 'lin'), t_gate, doneAction: 0))
-}).add;
+}, metadata:()).add;

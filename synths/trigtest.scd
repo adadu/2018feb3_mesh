@@ -7,4 +7,4 @@ SynthDef(\trigTest, {
                 freq, 0,
                 Decay2.kr(t_trig, 0.005, dur)
         ), 0));
-}).add;
+}, metadata:()).add;

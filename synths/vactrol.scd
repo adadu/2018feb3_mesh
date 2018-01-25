@@ -8,4 +8,4 @@ SynthDef(\vactrol, {|out = 0, attack = 0.05, density = 5, bwr = 0.8, pos = 0, le
   laggedTrig = trig.lag();
   sig = MoogFF.ar(sig, freq, bwr);
   Out.ar(out, Pan2.ar(sig, pos));
-}).add();
+}, metadata:()).add();

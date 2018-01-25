@@ -9,6 +9,6 @@ SynthDef(\hihat, {|
 	var envGen = EnvGen.kr(env, t_gate, doneAction: 0, timeScale: len);
 	var hit = HPF.ar(LPF.ar(WhiteNoise.ar(1), lpFreq), hpFreq);
 	Out.ar(out, (hit * envGen * amp));
-},
+}, metadata:()
 ).add;
 

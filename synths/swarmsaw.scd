@@ -28,4 +28,4 @@ SynthDef(\swarmSaw2, {
     ];
 
     Out.ar(0, arryPan);
-}).add;
+}, metadata:()).add;

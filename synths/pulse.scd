@@ -21,4 +21,4 @@ SynthDef(\pulse, {|
 	var width = XLine.ar(mod1, mod2, dur);
 	var pulse = Pulse.ar(freqArry, width, amp/harmonics);
 	Out.ar(out, pulse * envGen);
-}).add;
+}, metadata:()).add;
