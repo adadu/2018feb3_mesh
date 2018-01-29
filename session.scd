@@ -17,6 +17,7 @@
 
 // FM Grain Starts - Robert
 // time in:
+   MeshMono.makeTemplate(\fmGrain, "_mono", "_bind");
 
 // StringRes2 End - Jason
 // time out:
