@@ -17,7 +17,7 @@ SynthDef(\pulse, {|
 	var freqArry = Array.fill(harmonics, {
 		arg i; (freq + (i * int * freq)) });
 
-	var width = XLine.ar(mod1, mod2, dur);
+	var width = XLine.ar(mod1, mod2, len);
 	var pulse = Pulse.ar(freqArry, width, amp/harmonics);
 	Out.ar(out, pulse * envGen);
 }, metadata:(
