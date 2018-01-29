@@ -1,11 +1,12 @@
 // SECTION 1:
 // Swarm Saw Start - James
 // swarmSaw_1.scd
-
+   MeshMono.makeTemplate(\swarmSawJames, "_mono", "_bind");
 
 // StringRes1 Start - Robert
 // time in:
-   MeshMono.makeTemplate(\swarmSawJames, "_mono", "_bind");
+   MeshMono.makeTemplate(\stringRes, "_mono", "_bind");
+
 
 // SwarmSaw end - james:
 // time out:

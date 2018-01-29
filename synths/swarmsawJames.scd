@@ -86,7 +86,7 @@ SynthDef(\swarmSawJames, {
 
     Out.ar(0, arryPan);
 }, metadata:(
-    \out: nil,
+	\out: Pseq([0],inf),
     \dur: Pmeanrand(1, 5, inf),
     \freq1: Pmeanrand(50, 70, inf),
     \freq2: Pmeanrand(50, 70, inf),
