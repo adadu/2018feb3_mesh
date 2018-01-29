@@ -67,105 +67,129 @@ s.queryAllNodes;
 \id, ~swarmSawJames_bindID,
 \type, \set,
 \args, #[],
+\out, Pdefn(\swarmSawJamesout_bind, 0, inf),
 \dur, Pdefn(\swarmSawJamesdur_bind, Pmeanrand(0.1, 0.5)),
 
-\frqlag3, Pdefn(\swarmSawJamesfrqlag3_bind, Pmeanrand(1, 5)),
 \frqOffset, Pdefn(\swarmSawJamesfrqOffset_bind, Pmeanrand(10, 50)),
-\rlpfrq4, Pdefn(\swarmSawJamesrlpfrq4_bind, Pmeanrand(100, 500)),
-\rlprq2, Pdefn(\swarmSawJamesrlprq2_bind, Pmeanrand(0.5, 1.5)),
-\out, Pdefn(\swarmSawJamesout_bind, nil),
-\panx3, Pdefn(\swarmSawJamespanx3_bind, Pmeanrand(-1.0)),
-\rlpfrqlag2, Pdefn(\swarmSawJamesrlpfrqlag2_bind, Pmeanrand(1, 5)),
-\rlprq3, Pdefn(\swarmSawJamesrlprq3_bind, Pmeanrand(0.5, 1.5)),
-\rlpfrqlag1, Pdefn(\swarmSawJamesrlpfrqlag1_bind, Pmeanrand(1, 5)),
-\panxlag3, Pdefn(\swarmSawJamespanxlag3_bind, Pmeanrand(1, 5)),
-\amplag3, Pdefn(\swarmSawJamesamplag3_bind, Pmeanrand(1, 5)),
-\frqlag2, Pdefn(\swarmSawJamesfrqlag2_bind, Pmeanrand(1, 5)),
-\panxlag1, Pdefn(\swarmSawJamespanxlag1_bind, Pmeanrand(1, 5)),
-\panylag4, Pdefn(\swarmSawJamespanylag4_bind, Pmeanrand(1, 5)),
-\panx4, Pdefn(\swarmSawJamespanx4_bind, Pmeanrand(-1.0)),
-\rlpfrq3, Pdefn(\swarmSawJamesrlpfrq3_bind, Pmeanrand(100, 500)),
-\freq1, Pdefn(\swarmSawJamesfreq1_bind, Pmeanrand(50, 70)),
-\rlpfrqlag4, Pdefn(\swarmSawJamesrlpfrqlag4_bind, Pmeanrand(1, 5)),
-\pany4, Pdefn(\swarmSawJamespany4_bind, Pmeanrand(-1.0)),
-\rlpfrqlag3, Pdefn(\swarmSawJamesrlpfrqlag3_bind, Pmeanrand(1, 5)),
-\pany3, Pdefn(\swarmSawJamespany3_bind, Pmeanrand(-1.0)),
-\amplag2, Pdefn(\swarmSawJamesamplag2_bind, Pmeanrand(1, 5)),
-\freq2, Pdefn(\swarmSawJamesfreq2_bind, Pmeanrand(50, 70)),
-\amplag4, Pdefn(\swarmSawJamesamplag4_bind, Pmeanrand(1, 5)),
-\pany1, Pdefn(\swarmSawJamespany1_bind, Pmeanrand(-1.0)),
-\panxlag4, Pdefn(\swarmSawJamespanxlag4_bind, Pmeanrand(1, 5)),
-\amp1, Pdefn(\swarmSawJamesamp1_bind, Pmeanrand(0.01, 0.1)),
-\amp3, Pdefn(\swarmSawJamesamp3_bind, Pmeanrand(0.01, 0.1)),
-\panylag2, Pdefn(\swarmSawJamespanylag2_bind, Pmeanrand(1, 5)),
-\rlprq4, Pdefn(\swarmSawJamesrlprq4_bind, Pmeanrand(0.5, 1.5)),
-\rlpfrq1, Pdefn(\swarmSawJamesrlpfrq1_bind, Pmeanrand(100, 500)),
-\rlprq1, Pdefn(\swarmSawJamesrlprq1_bind, Pmeanrand(0.5, 1.5)),
-\panx2, Pdefn(\swarmSawJamespanx2_bind, Pmeanrand(-1.0)),
-\freq3, Pdefn(\swarmSawJamesfreq3_bind, Pmeanrand(50, 70)),
 \frqSpread, Pdefn(\swarmSawJamesfrqSpread_bind, Pmeanrand(5, 25)),
+
+\freq1, Pdefn(\swarmSawJamesfreq1_bind, Pmeanrand(50, 70)),
+\freq2, Pdefn(\swarmSawJamesfreq2_bind, Pmeanrand(50, 70)),
+\freq3, Pdefn(\swarmSawJamesfreq3_bind, Pmeanrand(50, 70)),
 \freq4, Pdefn(\swarmSawJamesfreq4_bind, Pmeanrand(50, 70)),
-\panx1, Pdefn(\swarmSawJamespanx1_bind, Pmeanrand(-1.0)),
-\pany2, Pdefn(\swarmSawJamespany2_bind, Pmeanrand(-1.0)),
-\amp4, Pdefn(\swarmSawJamesamp4_bind, Pmeanrand(0.01, 0.1)),
-\frqlag4, Pdefn(\swarmSawJamesfrqlag4_bind, Pmeanrand(1, 5)),
-\panxlag2, Pdefn(\swarmSawJamespanxlag2_bind, Pmeanrand(1, 5)),
-\panylag3, Pdefn(\swarmSawJamespanylag3_bind, Pmeanrand(1, 5)),
-\amplag1, Pdefn(\swarmSawJamesamplag1_bind, Pmeanrand(1, 5)),
-\rlpfrq2, Pdefn(\swarmSawJamesrlpfrq2_bind, Pmeanrand(100, 500)),
-\amp2, Pdefn(\swarmSawJamesamp2_bind, Pmeanrand(0.01, 0.1)),
-\panylag1, Pdefn(\swarmSawJamespanylag1_bind, Pmeanrand(1, 5)),
+
 \frqlag1, Pdefn(\swarmSawJamesfrqlag1_bind, Pmeanrand(1, 5)),
+\frqlag2, Pdefn(\swarmSawJamesfrqlag2_bind, Pmeanrand(1, 5)),
+\frqlag3, Pdefn(\swarmSawJamesfrqlag3_bind, Pmeanrand(1, 5)),
+\frqlag4, Pdefn(\swarmSawJamesfrqlag4_bind, Pmeanrand(1, 5)),
+
+\rlpfrq1, Pdefn(\swarmSawJamesrlpfrq1_bind, Pmeanrand(100, 500)),
+\rlpfrq2, Pdefn(\swarmSawJamesrlpfrq2_bind, Pmeanrand(100, 500)),
+\rlpfrq3, Pdefn(\swarmSawJamesrlpfrq3_bind, Pmeanrand(100, 500)),
+\rlpfrq4, Pdefn(\swarmSawJamesrlpfrq4_bind, Pmeanrand(100, 500)),
+
+\rlpfrqlag1, Pdefn(\swarmSawJamesrlpfrqlag1_bind, Pmeanrand(1, 5)),
+\rlpfrqlag2, Pdefn(\swarmSawJamesrlpfrqlag2_bind, Pmeanrand(1, 5)),
+\rlpfrqlag3, Pdefn(\swarmSawJamesrlpfrqlag3_bind, Pmeanrand(1, 5)),
+\rlpfrqlag4, Pdefn(\swarmSawJamesrlpfrqlag4_bind, Pmeanrand(1, 5)),
+
+\rlprq1, Pdefn(\swarmSawJamesrlprq1_bind, Pmeanrand(0.5, 1.5)),
+\rlprq2, Pdefn(\swarmSawJamesrlprq2_bind, Pmeanrand(0.5, 1.5)),
+\rlprq3, Pdefn(\swarmSawJamesrlprq3_bind, Pmeanrand(0.5, 1.5)),
+\rlprq4, Pdefn(\swarmSawJamesrlprq4_bind, Pmeanrand(0.5, 1.5)),
+
+\amp1, Pdefn(\swarmSawJamesamp1_bind, Pmeanrand(0.01, 0.1)),
+\amp2, Pdefn(\swarmSawJamesamp2_bind, Pmeanrand(0.01, 0.1)),
+\amp3, Pdefn(\swarmSawJamesamp3_bind, Pmeanrand(0.01, 0.1)),
+\amp4, Pdefn(\swarmSawJamesamp4_bind, Pmeanrand(0.01, 0.1)),
+
+\amplag1, Pdefn(\swarmSawJamesamplag1_bind, Pmeanrand(1, 5)),
+\amplag2, Pdefn(\swarmSawJamesamplag2_bind, Pmeanrand(1, 5)),
+\amplag3, Pdefn(\swarmSawJamesamplag3_bind, Pmeanrand(1, 5)),
+\amplag4, Pdefn(\swarmSawJamesamplag4_bind, Pmeanrand(1, 5)),
+
+\panx1, Pdefn(\swarmSawJamespanx1_bind, Pmeanrand(-1.0)),
+\panx2, Pdefn(\swarmSawJamespanx2_bind, Pmeanrand(-1.0)),
+\panx3, Pdefn(\swarmSawJamespanx3_bind, Pmeanrand(-1.0)),
+\panx4, Pdefn(\swarmSawJamespanx4_bind, Pmeanrand(-1.0)),
+
+\panxlag1, Pdefn(\swarmSawJamespanxlag1_bind, Pmeanrand(1, 5)),
+\panxlag2, Pdefn(\swarmSawJamespanxlag2_bind, Pmeanrand(1, 5)),
+\panxlag3, Pdefn(\swarmSawJamespanxlag3_bind, Pmeanrand(1, 5)),
+\panxlag4, Pdefn(\swarmSawJamespanxlag4_bind, Pmeanrand(1, 5)),
+
+\pany1, Pdefn(\swarmSawJamespany1_bind, Pmeanrand(-1.0)),
+\pany2, Pdefn(\swarmSawJamespany2_bind, Pmeanrand(-1.0)),
+\pany3, Pdefn(\swarmSawJamespany3_bind, Pmeanrand(-1.0)),
+\pany4, Pdefn(\swarmSawJamespany4_bind, Pmeanrand(-1.0)),
+
+\panylag1, Pdefn(\swarmSawJamespanylag1_bind, Pmeanrand(1, 5)),
+\panylag2, Pdefn(\swarmSawJamespanylag2_bind, Pmeanrand(1, 5)),
+\panylag3, Pdefn(\swarmSawJamespanylag3_bind, Pmeanrand(1, 5)),
+\panylag4, Pdefn(\swarmSawJamespanylag4_bind, Pmeanrand(1, 5))
 ).play;
 
 
-Pdefn(\swarmSawJamesfrqlag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesout_bind, 0, inf);
+Pdefn(\swarmSawJamesdur_bind, Pmeanrand(0.1, 0.5));
+
 Pdefn(\swarmSawJamesfrqOffset_bind, Pmeanrand(10, 50));
-Pdefn(\swarmSawJamesrlpfrq4_bind, Pmeanrand(100, 500));
-Pdefn(\swarmSawJamesrlprq2_bind, Pmeanrand(0.5, 1.5));
-Pdefn(\swarmSawJamesout_bind, nil);
-Pdefn(\swarmSawJamespanx3_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesrlpfrqlag2_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesrlprq3_bind, Pmeanrand(0.5, 1.5));
-Pdefn(\swarmSawJamesrlpfrqlag1_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanxlag3_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesamplag3_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesfrqlag2_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanxlag1_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanylag4_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanx4_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesrlpfrq3_bind, Pmeanrand(100, 500));
-Pdefn(\swarmSawJamesfreq1_bind, Pmeanrand(50, 70));
-Pdefn(\swarmSawJamesrlpfrqlag4_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespany4_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesrlpfrqlag3_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespany3_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesamplag2_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesfreq2_bind, Pmeanrand(50, 70));
-Pdefn(\swarmSawJamesamplag4_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespany1_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamespanxlag4_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesamp1_bind, Pmeanrand(0.01, 0.1));
-Pdefn(\swarmSawJamesamp3_bind, Pmeanrand(0.01, 0.1));
-Pdefn(\swarmSawJamespanylag2_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesrlprq4_bind, Pmeanrand(0.5, 1.5));
-Pdefn(\swarmSawJamesrlpfrq1_bind, Pmeanrand(100, 500));
-Pdefn(\swarmSawJamesrlprq1_bind, Pmeanrand(0.5, 1.5));
-Pdefn(\swarmSawJamespanx2_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesfreq3_bind, Pmeanrand(50, 70));
 Pdefn(\swarmSawJamesfrqSpread_bind, Pmeanrand(5, 25));
+
+Pdefn(\swarmSawJamesfreq1_bind, Pmeanrand(50, 70));
+Pdefn(\swarmSawJamesfreq2_bind, Pmeanrand(50, 70));
+Pdefn(\swarmSawJamesfreq3_bind, Pmeanrand(50, 70));
 Pdefn(\swarmSawJamesfreq4_bind, Pmeanrand(50, 70));
-Pdefn(\swarmSawJamespanx1_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamespany2_bind, Pmeanrand(-1.0));
-Pdefn(\swarmSawJamesamp4_bind, Pmeanrand(0.01, 0.1));
-Pdefn(\swarmSawJamesfrqlag4_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanxlag2_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamespanylag3_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesamplag1_bind, Pmeanrand(1, 5));
-Pdefn(\swarmSawJamesrlpfrq2_bind, Pmeanrand(100, 500));
-Pdefn(\swarmSawJamesamp2_bind, Pmeanrand(0.01, 0.1));
-Pdefn(\swarmSawJamespanylag1_bind, Pmeanrand(1, 5));
+
 Pdefn(\swarmSawJamesfrqlag1_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesfrqlag2_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesfrqlag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesfrqlag4_bind, Pmeanrand(1, 5));
+
+Pdefn(\swarmSawJamesrlpfrq1_bind, Pmeanrand(100, 500));
+Pdefn(\swarmSawJamesrlpfrq2_bind, Pmeanrand(100, 500));
+Pdefn(\swarmSawJamesrlpfrq3_bind, Pmeanrand(100, 500));
+Pdefn(\swarmSawJamesrlpfrq4_bind, Pmeanrand(100, 500));
+
+Pdefn(\swarmSawJamesrlpfrqlag1_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesrlpfrqlag2_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesrlpfrqlag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesrlpfrqlag4_bind, Pmeanrand(1, 5));
+
+Pdefn(\swarmSawJamesrlprq1_bind, Pmeanrand(0.5, 1.5));
+Pdefn(\swarmSawJamesrlprq2_bind, Pmeanrand(0.5, 1.5));
+Pdefn(\swarmSawJamesrlprq3_bind, Pmeanrand(0.5, 1.5));
+Pdefn(\swarmSawJamesrlprq4_bind, Pmeanrand(0.5, 1.5));
+
+Pdefn(\swarmSawJamesamp1_bind, Pmeanrand(0.01, 0.1));
+Pdefn(\swarmSawJamesamp2_bind, Pmeanrand(0.01, 0.1));
+Pdefn(\swarmSawJamesamp3_bind, Pmeanrand(0.01, 0.1));
+Pdefn(\swarmSawJamesamp4_bind, Pmeanrand(0.01, 0.1));
+
+Pdefn(\swarmSawJamesamplag1_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesamplag2_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesamplag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamesamplag4_bind, Pmeanrand(1, 5));
+
+Pdefn(\swarmSawJamespanx1_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespanx2_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespanx3_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespanx4_bind, Pmeanrand(-1.0));
+
+Pdefn(\swarmSawJamespanxlag1_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanxlag2_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanxlag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanxlag4_bind, Pmeanrand(1, 5));
+
+Pdefn(\swarmSawJamespany1_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespany2_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespany3_bind, Pmeanrand(-1.0));
+Pdefn(\swarmSawJamespany4_bind, Pmeanrand(-1.0));
+
+Pdefn(\swarmSawJamespanylag1_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanylag2_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanylag3_bind, Pmeanrand(1, 5));
+Pdefn(\swarmSawJamespanylag4_bind, Pmeanrand(1, 5));
 )
 
 ~swarmSawJames_bind.stop
