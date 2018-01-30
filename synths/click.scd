@@ -1,13 +1,15 @@
-SynthDef(\click, {
-	|out=0,
+SynthDef(\click, {|
+	outFreq=120,
 	freq=120,
-	amp=0|
+	amp=0 |
 
-    var click;
-    click = Impulse.ar(freq);
-    DetectSilence.ar(click,doneAction:0);
-    OffsetOut.ar(out, click * amp);
-}, metadata:()).add;
-
-
-	
+	var click = Impulse.ar(freq);
+	Out.ar(
+		TIRand.kr(0, 3, Impulse.kr(outFreq)),
+		click * amp);
+}, metadata:(
+	\dur: Pexprand(0.01, 0.1),
+	\outFreq: "10, inf",
+	\freq: "10, inf",
+	\amp: Pseq([Pseries(0, 0.0001, 2000), Pn(0.2)], inf)
+)).add;

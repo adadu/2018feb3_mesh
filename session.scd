@@ -28,6 +28,7 @@
 // Click starts - Robert
 // time:
 
+   MeshMono.makeTemplate(\click, "_mono", "_bind");
 
 
 
