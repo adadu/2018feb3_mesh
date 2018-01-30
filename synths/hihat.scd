@@ -13,7 +13,7 @@ SynthDef(\hihat, {|
 
 metadata:(
 	\dur: Pn(Pseries(0.05, 0.01, 20)),
-	\t_gate: "1, inf",
+	\gate: "1, inf",
 	\lpFreq: "6000, inf",
 	\hpFreq: "2500, inf",
 	\out: Prand((0..3), inf),
