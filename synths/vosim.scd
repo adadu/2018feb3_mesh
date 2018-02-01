@@ -33,7 +33,7 @@ SynthDef(\vosim, {|
 	\t_gate: Pseq([1], inf),
 	\len: Pseq([1], inf),
 	\harms: Pbrown(1, 12, 1),
-	\out, Pseq([0], inf),
+	\out: Pseq([0], inf),
 	\impfreq: Pn(Pgeom(10, 1.06, 30)),
 	\impdepth: Pwhite(1, 9),
 	\freq: Pseq([400], inf),
