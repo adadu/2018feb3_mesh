@@ -9,7 +9,7 @@ SynthDef(\click, {|
 		click * amp);
 }, metadata:(
 	\dur: Pexprand(0.01, 0.1),
-	\outFreq: "10, inf",
-	\freq: "10, inf",
+	\outFreq: 10,
+	\freq: 10,
 	\amp: Pseq([Pseries(0, 0.0001, 2000), Pn(0.2)], inf)
 )).add;

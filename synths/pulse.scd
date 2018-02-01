@@ -27,9 +27,9 @@ SynthDef(\pulse, {|
 		                4,
 	                    Pgeom(1.345, 0.909, 20),
 		                Pn(1, 3)], inf),
-	\len: "0.5, inf",
-	\gate: "1, inf",
-	\freq: "80, inf",
+	\len: 0.5,
+	\gate: 1,
+	\freq: 80,
 	\mod1: Pn(Pseries(0.01, 0.01, 99), inf),
 	\mod2: Pn(Pseries(0.99, -0.01, 99), inf),
 	\int: Prand([
@@ -40,7 +40,5 @@ SynthDef(\pulse, {|
 		         Pgeom(4, 0.9, 9)], 1),
 		         Pseq([Pseries(0.5, 0.5, 10), Pseries(0.1, 0.6, 9)], 1)], inf),
 	\att:Pwrand([0.05, 0.95, \rest], [0.05, 0.90, 0.05], inf),
-	\amp: "0.25, inf"
+	\amp: 0.25"
 )).add;
-
-

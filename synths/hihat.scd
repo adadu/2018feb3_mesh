@@ -13,11 +13,10 @@ SynthDef(\hihat, {|
 
 metadata:(
 	\dur: Pn(Pseries(0.05, 0.01, 20)),
-	\gate: "1, inf",
-	\lpFreq: "6000, inf",
-	\hpFreq: "2500, inf",
+	\gate: 1,
+	\lpFreq: 6000,
+	\hpFreq: 2500,
 	\out: Prand((0..3), inf),
 	\amp: Pseq([Pseries(0, 0.0004, 500), Pn(0.2)])
 )
 ).add;
-
