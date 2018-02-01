@@ -40,5 +40,5 @@ SynthDef(\pulse, {|
 		         Pgeom(4, 0.9, 9)], 1),
 		         Pseq([Pseries(0.5, 0.5, 10), Pseries(0.1, 0.6, 9)], 1)], inf),
 	\att:Pwrand([0.05, 0.95, \rest], [0.05, 0.90, 0.05], inf),
-	\amp: 0.25"
+	\amp: 0.25
 )).add;
