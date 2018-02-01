@@ -2,10 +2,10 @@
 (
 ~clkM1 = Pmono(
 	\click,
-	\dur, Pdefn(\clkMdur, 3),
-	\outFreq, Pdefn(\clkMout, 10),
-	\freq, Pdefn(\clkMfreq, 10),
-	\amp, Pdefn(\clkMamp, 0.3)
+	\dur, Pdefn(\clkM1dur, 3),
+	\outFreq, Pdefn(\clkM1out, 10),
+	\freq, Pdefn(\clkM1freq, 10),
+	\amp, Pdefn(\clkM1amp, 0.3)
 );
 )
 
@@ -32,7 +32,7 @@ Pdefn(\clkM1dur, 1);
 Pdefn(\clkM1dur, Prand((0.3..1),inf));
 Pdefn(\clkM1out, 20);
 Pdefn(\clkM1freq, Pseq((400..4000), inf, 12));
-Pdefn(\clkM1amp, 0.4);
+Pdefn(\clkM1amp, 0.5);
 
 // 2ND PMONO mods
 Pdefn(\clkM2dur, Pseq((0.1..0.5),inf));
@@ -43,7 +43,7 @@ Pdefn(\clkM2amp, 0.01);
 // PBIND to control running Pmono w/ Pbind
 // query nodes, assign clkB1nodeID to appropriate node
 s.queryAllNodes;
-~clkB1nodeID = 11111111;
+~clkB1nodeID = 201327593;
 
 (
 ~clkB1=Pbind(
@@ -58,14 +58,16 @@ s.queryAllNodes;
 );
 )
 
-a = ~click_bind.play;
+a = ~clkB1.play;
 a.stop;
 
-Pdefn(\clkB1outFreq, 20, inf);
-Pdefn(\clkB1freq, Pseq([Pseries(2000, -100, 19), 500, 600],inf));
-Pdefn(\clkB1freq, 10000, inf);
+// PBIND mods
+Pdefn(\clkB1outFreq, 0.2, inf);
+Pdefn(\clkB1freq, Prand([Pseries(200, -10, 19), 50, 80],inf));
+Pdefn(\clkB1freq, Pseq((400..4000), inf, 12));
 Pdefn(\clkB1amp, 2);
-Pdefn(\clickamp_bind, 0.7);
+Pdefn(\clkB1amp, 0.05);
+Pdefn(\clkB1dur, 1);
 
 // BUNK node? query nodes, find synth, kill it
 s.queryAllNodes;
