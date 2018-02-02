@@ -4,7 +4,7 @@ SynthDef(\stringRes, {
 	startfreq=1,
 	endfreq=20,
 	len=1,
-	t_gate=1,
+	t_gate,
 	res=0.9,
 	amp=0,
 	att=0.2,
@@ -20,11 +20,9 @@ SynthDef(\stringRes, {
 			WhiteNoise.ar,
 			EnvGen.kr(
 				Env([startfreq, startfreq, endfreq], [0, len], 'exp'),
-				t_gate,
-				doneAction: 0).reciprocal,
-			res,
-			amp
-		) * EnvGen.ar(
+				t_gate, doneAction: 0).reciprocal, res, amp)
+		*
+		EnvGen.ar(
 			Env(
 				[0, 0, att, dec, sus, 0],
 				[0, attime, dectime, sustime, reltime].normalizeSum * len,
