@@ -31,8 +31,8 @@ b.stop;
 Pdefn(\clkM1dur, 1);
 Pdefn(\clkM1dur, Prand((0.3..1),inf));
 Pdefn(\clkM1out, 20);
-Pdefn(\clkM1freq, Pseq((400..4000), inf, 12));
-Pdefn(\clkM1amp, 0.5);
+Pdefn(\clkM1freq, Pseq((400..433), inf, 3));
+Pdefn(\clkM1amp, 0.01);
 
 // 2ND PMONO mods
 Pdefn(\clkM2dur, Pseq((0.1..0.5),inf));
@@ -71,4 +71,4 @@ Pdefn(\clkB1dur, 1);
 
 // BUNK node? query nodes, find synth, kill it
 s.queryAllNodes;
-s.sendMsg("/n_free", 134218728);
+s.sendMsg("/n_free", 134218738);
