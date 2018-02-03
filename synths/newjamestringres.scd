@@ -12,22 +12,7 @@ res = 0.9,
 amp = 0.25,
 startfreq=1,
 endfreq=20,
-t_gate = 1 |
-
-	// var out = 0;
-	// var attime=0.2;
-	// var	dectime=0.2;
-	// var	sustime=0.3;
-	// var	reltime=0.4;
-	// var	len=1;
-	// var sus= 1;
-	// var dec= 1;
-	// var att=0.2;
-	// var res = 0.9;
-	// var amp = 0.25;
-	// var startfreq=1;
-	// var endfreq=20;
-	// var	t_gate = 1;
+t_gate = 0 |
 
 var source = WhiteNoise.ar;
 
