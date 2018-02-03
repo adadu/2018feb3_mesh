@@ -5,7 +5,7 @@ MeshMono.makeTemplate(\vactrol, "_mono", "_bind");
 (
 ~vactrol_mono = Pmono(\vactrol,
 \len, Pdefn(\vactrollen_mono, nil),
-\amp, Pdefn(\vactrolamp_mono, nil),
+\level, Pdefn(\vactrollevel_mono, nil),
 \res, Pdefn(\vactrolres_mono, nil),
 \pulseFreq, Pdefn(\vactrolpulseFreq_mono, nil),
 \attack, Pdefn(\vactrolattack_mono, nil),
@@ -24,7 +24,7 @@ MeshMono.makeTemplate(\vactrol, "_mono", "_bind");
 
 s.queryAllNodes;
 
-~vactrol_bindID = 1014;
+~vactrol_bindID = 268436461;
 
 
 (
@@ -34,7 +34,7 @@ s.queryAllNodes;
 \type, \set,
 \args, #[],
 \len, Pdefn(\vactrollen_bind),
-\amp, Pdefn(\vactrolamp_bind),
+\level, Pdefn(\vactrollevel_bind),
 \res, Pdefn(\vactrolres_bind),
 \pulseFreq, Pdefn(\vactrolpulseFreq_bind),
 \attack, Pdefn(\vactrolattack_bind),
@@ -55,14 +55,14 @@ s.queryAllNodes;
 ~vactrol_bind.reset.play;
 
 Pdefn(\vactrollen_bind, Pn(Pexprand(0.125, 5), inf));
-Pdefn(\vactrolamp_bind, Pn(0.15));
+Pdefn(\vactrollevel_bind, Pexprand(0.05, 0.05));
 Pdefn(\vactrolres_bind, Pn(2.8));
 Pdefn(\vactrolpulseFreq_bind, Pn(Pexprand(5, 50, inf)));
 Pdefn(\vactrolattack_bind, Pn(0.5));
 Pdefn(\vactrolt_gate_bind, Pn(1));
 Pdefn(\vactrolpanY_bind, Pn(0));
 Pdefn(\vactrolin_bind, Pn(20));
-Pdefn(\vactrolout_bind, Pn(0));
+Pdefn(\vactrolout_bind, Pn(Prand([0,1,2,3], inf)));
 Pdefn(\vactrolpulseWidth_bind, Pn(Pseries(0.01, 0.001, 100)));
 Pdefn(\vactrolsource_bind, Pn(1));
 Pdefn(\vactrolpanX_bind, Pn(Pbrown(-1, 1, 0.125)));
@@ -72,4 +72,6 @@ Pdefn(\vactroldur_bind, Pn(Prand([Rest(2),Pexprand(0.125, 5)], inf), inf));
 //Some Ideas: split Pbinds into 2. 1 for timbre and 1 for rythm/spatial.
 
 s.sendMsg("/n_free",~vactrol_bindID);
+s.sendMsg("/n_set",~vactrol_bindID, \level, 0.025);
 ~vactrolSynth.free;
+~vactrol_bindID
