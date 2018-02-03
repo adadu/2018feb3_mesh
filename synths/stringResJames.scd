@@ -1,17 +1,18 @@
 SynthDef(\stringResJames, {
 | out = 0,
-attime=0.2,
-dectime=0.2,
-sustime=0.3,
-reltime=0.4,
-len=1,
-sus= 1,
-dec= 1,
-att=0.2,
+attime = 0.2,
+dectime = 0.2,
+sustime = 0.3,
+reltime = 0.4,
+len = 1,
+sus = 1,
+dec = 1,
+att = 0.2,
 res = 0.9,
 amp = 0.25,
-startfreq=1,
-endfreq=20,
+startfreq = 1,
+endfreq = 20,
+limit = 0.1,
 t_gate = 0 |
 
 var source = WhiteNoise.ar;
@@ -25,7 +26,6 @@ var delayTimeEnvGen = EnvGen.kr(
 	delayTimeEnv,
 	gate: t_gate,
 	doneAction: 0).reciprocal;
-
 
 var ampEnv = Env(
 	levels: [0, 0, att, dec, sus, 0],
@@ -43,6 +43,6 @@ var resonator = Streson.ar(
 	res: res,
 	mul: (ampEnvGen * amp));
 
-	Out.ar(out, resonator);
+	Out.ar(out, Limiter.ar(Sanitize.ar(resonator, 0), limit, 0.01));
 
 }).add;
