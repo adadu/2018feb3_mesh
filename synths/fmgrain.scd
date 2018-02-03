@@ -1,6 +1,7 @@
 SynthDef(\fmGrain, {|
     t_gate = 1,
 	amp = 0,
+	limit = 0.1,
 	indexRate = 1,
 	indexRangeLow = 1,
 	indexRangeHi = 10,
@@ -17,8 +18,7 @@ SynthDef(\fmGrain, {|
 		      levelScale: amp,
 		      doneAction: 0);
 	var ndx = LFNoise1.kr(indexRate).range(indexRangeLow, indexRangeHi);
-	var fmgr = FMGrain.ar(Impulse.ar(freq), len, carfreq, modfreq, ndx, env);
-	Out.ar(0, Pan4.ar(fmgr, panX, panY, amp));
+	var fmgr = FMGrain.ar(Impulse.ar(freq), len, carfreq, modfreq, ndx, env*amp);
+	Out.ar(0, Pan4.ar(Limiter.ar(Sanitize.ar(fmgr, 0), limit, 0.01), panX, panY));
 }, metadata:()
 ).add;
-
